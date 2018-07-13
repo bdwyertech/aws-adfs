@@ -153,7 +153,7 @@ def _is_symantec_vip_authentication(html_response):
     element = html_response.find(auth_method)
     return (
         element is not None
-        and element.get('value') == 'SymantecVipAdapter'
+        and element.get('value') == 'VIPAuthenticationProviderUPN'
     )
 
 def _is_rsa_authentication(html_response):

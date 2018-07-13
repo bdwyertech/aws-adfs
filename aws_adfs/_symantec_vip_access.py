@@ -46,9 +46,9 @@ def _retrieve_roles_page(roles_page_url, context, session, ssl_verification_enab
         verify=ssl_verification_enabled,
         allow_redirects=True,
         data={
-            'AuthMethod': 'SymantecVipAdapter',
+            'AuthMethod': 'VIPAuthenticationProviderUPN',
             'Context': context,
-            'SecurityCode': vip_security_code,
+            'security_code': vip_security_code,
         }
     )
     logging.debug(u'''Request:
